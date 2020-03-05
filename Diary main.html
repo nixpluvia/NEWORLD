@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+  <html>
+    <head>
+      <title>Slime Diary</title>
+      <meta charset="utf-8">
+      <style>
+
+        /*레이아웃*/
+        * { box-sizing: border-box; }
+        body {
+          margin: 0;
+        }
+        h1 {
+          border-bottom: 5px solid #5affbd;
+          text-align: center;
+          padding: 35px; padding-bottom:45px;
+          margin: 0;
+          color: #5affbd;
+          font-size: 40px;
+        }
+        #Grid {
+          display:grid;
+          grid-template-columns: 2fr 400px;
+        }
+        #Main{
+          border-bottom: 5px solid #5affbd;
+        }
+        #Main {
+          padding-left: 30px;
+          padding-top: 35px;
+        }
+        #Side{
+          border: 5px solid #5affbd;
+          display:grid;
+          grid-template-rows: 249.6px 1fr;
+          border-top: none;
+          margin:0;
+        }
+        .Conlist {
+          border-top: 5px solid #5affbd;
+          background-color: #5affbd;
+        }
+        /*레이아웃*/
+
+        /*컨텐츠*/
+        #Main>.Titleimg {
+          padding:0;
+          text-align:center;
+        }
+        #Main>.Maintext {
+          padding:20px;
+          padding-top: 40px;
+          font-weight:bold;
+          color: #5affbd;
+          text-align:center;
+          letter-spacing: 10px;
+          font-size:25px;
+        }
+        /*컨텐츠*/
+
+        /*리스트*/
+        .Conlist ul{
+          padding-left: 10px;
+        }
+        .Conlist li{
+          list-style-type:none;
+          padding: 5px;
+          margin: 0;
+        }
+        .Conlist li a{
+          text-decoration: none;
+          color: white;
+        }
+        /*리스트*/
+
+        /* 달력 테이블*/
+        table {
+          width: 390px;
+          border: 1px solid white;
+          background-color: #b0ffe0;
+          border-spacing: 0;
+        }
+        tr {
+          border: 1px solid white;
+          background-color: #5affbd;
+        }
+        .week td{
+          text-align: center;
+          color: white;
+          padding: 0;
+          font-weight: bolder;
+        }
+        td {
+          padding-right: 10px;
+          padding-bottom: 20px;
+          color: white;
+          margin:0;
+          border: 1px solid white;
+        }
+        tr :first-child,.week tr:first-child{
+          color:#f083f5;
+        }
+        table tr:nth-child(2) td:not(:last-child){
+          color: #b0ffe0;
+        }
+        /* 달력 테이블*/
+
+        @media (max-width: 800px) {
+          /*컨텐츠순서정렬*/
+          #Grid {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-box;
+            -webkit-box-orient: vertical;
+            -moz-box-orient: vertical;
+            -ms-box-orient: vertical;
+          }
+          #Grid>#Side{
+            -webkit-box-ordinal-group: 1;
+            -moz-box-ordinal-group: 1;
+            -ms-box-oridnal-group: 1;
+          }
+          #Grid>#Main{
+            -webkit-box-ordinal-group: 2;
+            -moz-box-ordinal-group: 2;
+            -ms-box-ordinal-group: 2;
+          }
+          /*컨텐츠순서정렬*/
+
+          /*타이틀*/
+          h1 {
+            border:none;
+            padding: 20px; padding-bottom:25px;
+            border-bottom: 5px solid #5affbd;
+          }
+          /*타이틀*/
+
+          /*달력 및 날짜*/
+          #Side {
+            border:none;
+            display:grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: none;
+            height: 202.6px;
+            border-bottom:5px solid #5affbd;
+          }
+          table {
+            width: 200px;
+          }
+          td {
+            padding-right: 5px;
+            padding-bottom: 10px;
+          }
+          .Conlist {
+            border:none;
+            border-left: 5px solid #5affbd;
+          }
+          .Conlist ul{
+            margin:0;
+          }
+
+          /*달력 및 날짜*/
+
+          /*본문*/
+          .Maintext {
+            padding-left: 10px;
+            padding-top: 15px;
+          }
+          /*본문*/
+
+
+
+
+
+        }
+
+      </style>
+    </head>
+
+
+    <body>
+
+      <h1>슬라임의 저장창고</h1>
+
+      <div id="Grid">
+
+        <div id="Main">
+
+          <div class="Titleimg">
+
+            <img src="cloud.jpg" width="50%">
+
+          </div>
+
+          <div class="Maintext">
+            뀨뀨꺄꺄
+          </div>
+
+        </div>
+
+        <div id="Side">
+          <!-- 2월 달력 -->
+          <div class="day">
+
+            <table>
+              <tr class="week">
+
+                <td>일</td>
+                <td>월</td>
+                <td>화</td>
+                <td>수</td>
+                <td>목</td>
+                <td>금</td>
+                <td>토</td>
+
+              </tr>
+              <tr>
+
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+                <td>1</td>
+
+              </tr>
+              <tr>
+
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+
+              </tr>
+              <tr>
+
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+
+              </tr>
+              <tr>
+
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+
+              </tr>
+              <tr>
+
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+
+              </tr>
+
+            </table>
+
+          </div>
+          <!-- 2월 달력끝 -->
+
+          <div class="Conlist">
+            <ul>
+              <li><a href="https://www.naver.com">2020.02.05</li>
+              <li><a href="https://www.naver.com">2020.02.06</li>
+              <li><a href="https://www.naver.com">2020.02.07</li>
+              <li><a href="https://www.naver.com">2020.02.08</li>
+              <li><a href="https://www.naver.com">2020.02.09</li>
+              <li><a href="https://www.naver.com">2020.02.10</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </body>
+
+  </html>
